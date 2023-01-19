@@ -4,10 +4,14 @@
 // getClientWithNoMoney(bankAccounts) => ['Kevin', 'Jon']
 
 export function getClientWithNoMoney(array) {
-  // Your code goes here...
-
+  let names = []
+  for (const acc of array){
+    if(acc.balance === 0){
+    names.push(acc.name)
+    }
+  }
+return names
 }
-
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-6"
 // If the test has all tests passed, switch to the next exercise file
